@@ -1,4 +1,5 @@
-let ran1 = Math.floor(Math.random() * 6) + 1;
+if (sessionStorage.getItem('reloaded') != null) {
+    let ran1 = Math.floor(Math.random() * 6) + 1;
 if (ran1 == 1) {
     document.getElementsByClassName("img1")[0].setAttribute("src", "images/dice1.png");
 }
@@ -48,3 +49,7 @@ else if (ran1 < ran2) {
 else {
     document.querySelector("h1").innerHTML = "It's a draw! 🚩";
 }
+
+} 
+
+sessionStorage.setItem('reloaded', 'yes');
